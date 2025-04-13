@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation'
 import React, { Children } from 'react'
 import Sidebar from './_components/sidebar';
 
+export const dynamic = 'force-dynamic';
+
 const AdminLayout = async ({ children }) => {
     const admin = await getAdmin();
     if(!admin.authorized) {
